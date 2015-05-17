@@ -1,0 +1,24 @@
+{
+  "name": "JavascriptExercise",
+  "version": "1.0.0",
+  "description": "This is a growing exercise, it will get more shape and steps as the current ones get completed.",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmedinac/JavascriptExercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fmedinac/JavascriptExercise/issues"
+  },
+  "homepage": "https://github.com/fmedinac/JavascriptExercise",
+  "devDependencies": {
+    "backbone": "^1.2.0",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3"
+  }
+}
