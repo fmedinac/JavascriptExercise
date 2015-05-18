@@ -3,7 +3,7 @@ var App = require("../models/App.js");
 
 var ProfileList = Backbone.Collection.extend({
     model: App,
-    url: 'api/menu/data.json',
+    url: 'api/discover/data.json',
     
     initialize: function() {
         // Assign the Deferred issued by fetch() as a property
