@@ -5,19 +5,17 @@ var _ = Backbone._;
 var menuData;
 var collection;
 
-
 var MenuView = Backbone.View.extend({
     el: "#menu ul",
     template: _.template($('#profileTemplate').html()),
     prepare: function(actions){
-      
       var _this = this,
           deferred = $.Deferred();
 
       if($(_this.el).html().length) {
         deferred.resolve();
       }else{
-        _this.collection = new MenuCollection();
+        _this.collection = MenuCollection.getInstance();
 
         _this.collection.deferred.done(function() {
           var item = _this.collection.models[0].get("menu");
@@ -39,6 +37,11 @@ var MenuView = Backbone.View.extend({
     },
     render: function(eventName) {
       return this;
+    },
+    setActive: function(active){
+      console.log("SetActive", active);
+      $("#menu li").removeClass("active");
+      $("#menu *[data-path='"+active+"']").parent().addClass("active");
     }
 });
 var renderMenu = function(_this, el, profile) {

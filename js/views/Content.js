@@ -3,7 +3,7 @@ var Activity = require("../collections/Activity");
 var Discover = require("../collections/Discover");
 var $ = Backbone.$;
 var _ = Backbone._;
-var collection;
+var collection, menuCollection, currentItem;
 
 
 var ContentView = Backbone.View.extend({
@@ -26,8 +26,6 @@ var ContentView = Backbone.View.extend({
           _this.collection = new Discover();
           break;
       }
-
-      _this
 
       _this.collection.deferred.done(function() {
           var data = _this.collection.toJSON();

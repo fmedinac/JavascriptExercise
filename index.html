@@ -12,11 +12,13 @@
         <div id="page">
             <!-- <h1>Hello World!</h1> -->
         </div>
+        <div id="nav">
+        </div>
 
         <script id="profileTemplate" type="text/template">
             <li>
-                <% if (typeof(route) != "undefined") { %>
-                <a href="#<%= route %>">
+                <% if (typeof(path) != "undefined") { %>
+                <a href="#<%= path %>" data-route="<%= route %>" data-path="<%= path %>">
                     <%= text %>
                 </a>
                 <% } else { %>
